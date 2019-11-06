@@ -7,24 +7,27 @@ _why_.
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Flat Folder Structure](#flat-folder-structure)
-- [Official Vendor Part Files](#official-vendor-part-files)
-- [Unofficial Vendor Part Files](#unofficial-vendor-part-files)
-- [File Names](#file-names)
-- [Versioning](#versioning)
-- [Configurations](#configurations)
-- [Materials](#materials)
-- [Appearances](#appearances)
-- [Variables](#variables)
-- [Software Versions](#software-versions)
-- [Documentation](#documentation)
-- [Commits](#commits)
-- [Pull Requests](#pull-requests)
-- [Sketches](#sketches)
-- [Units](#units)
-- [Assembly References](#assembly-references)
+- [Standards](#standards)
+  - [Flat Folder Structure](#flat-folder-structure)
+  - [Official Vendor Part Files](#official-vendor-part-files)
+  - [Unofficial Vendor Part Files](#unofficial-vendor-part-files)
+  - [File Names](#file-names)
+  - [Versioning](#versioning)
+  - [Configurations](#configurations)
+  - [Materials](#materials)
+  - [Appearances](#appearances)
+  - [Variables](#variables)
+  - [Software Versions](#software-versions)
+  - [Documentation](#documentation)
+  - [Commits](#commits)
+  - [Pull Requests](#pull-requests)
+  - [Sketches](#sketches)
+  - [Units](#units)
+  - [Assembly References](#assembly-references)
 
-## Flat Folder Structure
+## Standards
+
+### Flat Folder Structure
 
 All _custom_ parts, drawings, and assembly files are stored directly in the
 `cad` folder and not in any subfolders.
@@ -44,7 +47,7 @@ files.
 
 </details>
 
-## Official Vendor Part Files
+### Official Vendor Part Files
 
 All parts and assemblies downloaded from a vendor are stored in the
 `cad/vendors_official/<VENDOR_NAME>` folder. Files downloaded directly from a
@@ -74,7 +77,7 @@ part cascade through the entire project effectively.
 
 </details>
 
-## Unofficial Vendor Part Files
+### Unofficial Vendor Part Files
 
 When the vendor does not provide CAD files to use, models must be created of the
 parts. These should be saved in the `cad/vendors_unofficial/<VENDOR_NAME>`
@@ -89,7 +92,7 @@ vendor.
 
 </details>
 
-## File Names
+### File Names
 
 Files should be saved with a descriptive name, using spaces and capital letters
 (ie `Descriptive File Name.sldprt`). File names should not duplicate information
@@ -110,7 +113,7 @@ necessary.
 
 </details>
 
-## Versioning
+### Versioning
 
 No more than one version of a file can exist in the project at any time.
 
@@ -121,7 +124,7 @@ duplicates invites conflicts and inconsistency.
 
 </details>
 
-## Configurations
+### Configurations
 
 Configurations should be used whenever feasible. If two similar parts are used
 in the project, combining the two into one part with two configurations should
@@ -136,7 +139,7 @@ improves large assembly performance.
 
 </details>
 
-## Materials
+### Materials
 
 All parts must have an accurate material set. If the exact material does not
 exist, it should be created and saved in the `cad/materials` folder. If the
@@ -149,7 +152,7 @@ assemblies much easier, and is a prerequisite for mass estimates.
 
 </details>
 
-## Appearances
+### Appearances
 
 If a part has a different appearance (ie, different color) than its material's
 default, the appearance should be set appropropriately on the part. If a part
@@ -163,7 +166,7 @@ significantly easier.
 
 </details>
 
-## Variables
+### Variables
 
 If a value is used more than once in a part, it should be stored in a global
 variable and referenced in dimensions and features. Variables should have
@@ -179,7 +182,7 @@ Using variables allows for rapid changes to parts or families of parts.
 
 </details>
 
-## Software Versions
+### Software Versions
 
 All files will be created using the most recent version of the CAD software
 available at the time of creation.
@@ -190,7 +193,7 @@ Using recent software ensures reliability and access to new features.
 
 </details>
 
-## Documentation
+### Documentation
 
 If included, documentation will be provided in the form of Markdown files. The
 overall project will be described in `readme.md` in the project root. All other
@@ -204,7 +207,7 @@ alphabetically, ensuring that discovering and finding them is simple.
 
 </details>
 
-## Commits
+### Commits
 
 Every batch of changes to files will be associated with a Git commit. The commit
 message will describe the changes made. The first line of the commit message
@@ -221,7 +224,7 @@ GitHub reccomends, for best display and support, that these rules are followed.
 
 </details>
 
-## Pull Requests
+### Pull Requests
 
 No commits shall be made directly to the `master` branch of a repository.
 Instead, sets of changes will be submitted in the form of pull requests, which
@@ -238,19 +241,19 @@ knowledge as input.
 
 </details>
 
-## Sketches
+### Sketches
 
 All sketches will be fully defined. No components of a sketch will be 'fixed'.
 As much as possible, sketch relationships will be used to define sketch
 components rather than dimensions. Preferrably, all dimensions should have
 descriptive names.
 
-## Units
+### Units
 
 All custom parts will use inches as the primary units. If possible, inches will
 be defined fractionally, up to 1/256".
 
-## Assembly References
+### Assembly References
 
 Unless abslutely necessary, parts should not reference other parts in
 assemblies. To avoid this, only edit parts with "Isolate" enabled or by opening
